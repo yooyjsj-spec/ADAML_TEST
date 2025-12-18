@@ -3,6 +3,7 @@ import { Layout } from '../components/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CommunityItem } from '../types';
 import { Calendar, Tag, ExternalLink, X, Newspaper, Bell, Image as ImageIcon, ChevronRight } from 'lucide-react';
+import { ASSETS } from '../data/assets';
 
 type Tab = 'news' | 'notice' | 'gallery';
 
@@ -40,9 +41,9 @@ export const Community: React.FC = () => {
   ];
 
   const galleryImages = [
-    { id: 'g1', title: 'TMS 2024 Conference', url: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop' },
-    { id: 'g2', title: 'Lab Group Photo', url: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop' },
-    { id: 'g3', title: 'SEM Analysis Session', url: 'https://images.unsplash.com/photo-1581093458791-9f302e6d38e4?q=80&w=2070&auto=format&fit=crop' },
+    { id: 'g1', title: 'TMS 2024 Conference', url: ASSETS.GALLERY.TMS_CONF },
+    { id: 'g2', title: 'Lab Group Photo', url: ASSETS.GALLERY.LAB_GROUP },
+    { id: 'g3', title: 'SEM Analysis Session', url: ASSETS.GALLERY.SEM_SESSION },
   ];
 
   return (

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Layout } from '../components/Layout';
 import { motion } from 'framer-motion';
-import { Role } from '../types';
 import { Mail, GraduationCap, MapPin, Phone, Building2 } from 'lucide-react';
 import { MetallicBackground } from '../components/MetallicBackground';
+import { ASSETS } from '../data/assets';
 
 // Define local interfaces for the specific data structure requested
 interface Student {
@@ -50,7 +50,7 @@ export const People: React.FC = () => {
               <div className="w-full lg:w-1/3 flex flex-col items-center text-center">
                 <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mb-6 border-4 border-white">
                   <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" 
+                    src={ASSETS.PEOPLE.PROFESSOR}
                     alt="Prof. Jae Bok-Seol" 
                     className="w-full h-full object-cover"
                   />

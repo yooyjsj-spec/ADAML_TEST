@@ -3,6 +3,7 @@ import { Layout } from '../components/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, BookOpen, FileText, Award, Calendar } from 'lucide-react';
 import { journalData } from '../data/journals';
+import { ASSETS } from '../data/assets';
 
 type Tab = 'journals' | 'conferences' | 'patents';
 
@@ -94,14 +95,19 @@ export const Publications: React.FC = () => {
                        {/* Placeholder for actual images since local files won't load in this preview */}
                        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200" />
                        <img 
-                          src={pub.image}
+                          src={pub.image || ASSETS.JOURNALS.DEFAULT_COVER}
                           alt="Journal Cover"
                           className="w-full h-full object-cover relative z-10 opacity-90 group-hover:scale-105 transition-transform duration-500"
                           onError={(e) => {
-                            // Fallback if image fails
-                            e.currentTarget.style.display = 'none';
-                            e.currentTarget.parentElement?.classList.add('flex', 'items-center', 'justify-center');
-                            e.currentTarget.parentElement!.innerHTML = '<svg class="w-12 h-12 text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>';
+                            // Fallback if image fails to load
+                            if (e.currentTarget.src !== ASSETS.JOURNALS.DEFAULT_COVER) {
+                                e.currentTarget.src = ASSETS.JOURNALS.DEFAULT_COVER;
+                            } else {
+                                // If default also fails, hide image and show icon
+                                e.currentTarget.style.display = 'none';
+                                e.currentTarget.parentElement?.classList.add('flex', 'items-center', 'justify-center');
+                                e.currentTarget.parentElement!.innerHTML = '<svg class="w-12 h-12 text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>';
+                            }
                           }}
                        />
                     </div>

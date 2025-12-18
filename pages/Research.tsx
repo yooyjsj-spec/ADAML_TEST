@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Layout } from '../components/Layout';
 import { BrainCircuit, Plane, Microscope, Printer, ArrowRight, ArrowLeft } from 'lucide-react';
+import { ASSETS } from '../data/assets';
 
 interface ResearchArea {
   id: string;
@@ -20,7 +21,7 @@ export const Research: React.FC = () => {
       id: "microstructure",
       title: "Microstructure Analysis",
       icon: Microscope,
-      image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop",
+      image: ASSETS.IMAGES.RESEARCH_MICRO,
       summary: "We investigate the relationships between processing, microstructure, and properties using advanced characterization techniques and AI-based image analysis.",
       fullContent: (
         <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
@@ -41,7 +42,7 @@ export const Research: React.FC = () => {
       id: "aerospace",
       title: "Aerospace and Defense Materials",
       icon: Plane,
-      image: "https://images.unsplash.com/photo-1542259695-ae04169524e9?q=80&w=1969&auto=format&fit=crop",
+      image: ASSETS.IMAGES.RESEARCH_AERO,
       summary: "We design and optimize advanced alloys for aerospace and defense applications, focusing on performance under extreme conditions.",
       fullContent: (
         <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
@@ -67,7 +68,7 @@ export const Research: React.FC = () => {
       id: "additive",
       title: "Additive Manufacturing",
       icon: Printer,
-      image: "https://images.unsplash.com/photo-1631541909061-71e349d1f203?q=80&w=2000&auto=format&fit=crop",
+      image: ASSETS.IMAGES.RESEARCH_PRINT,
       summary: "We develop and optimize metal additive manufacturing processes to control microstructure and enhance mechanical performance.",
       fullContent: (
         <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
@@ -85,7 +86,7 @@ export const Research: React.FC = () => {
       id: "ai",
       title: "AI Material Analysis",
       icon: BrainCircuit,
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop",
+      image: ASSETS.IMAGES.RESEARCH_AI,
       summary: "We apply machine learning and deep learning to automate microstructure analysis, predict material properties, and accelerate data-driven materials design.",
       fullContent: (
         <div className="space-y-6 text-gray-600 leading-relaxed text-lg">

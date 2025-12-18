@@ -15,7 +15,7 @@ export const Home: React.FC = () => {
           {/* Soft Background Image - Fixed Asset */}
           <div className="absolute inset-0">
             <img 
-              src={ASSETS.HOME_BACKGROUND}
+              src={ASSETS.IMAGES.HOME_HERO}
               alt="Aerospace Background" 
               className="w-full h-full object-cover"
             />
@@ -103,7 +103,7 @@ export const Home: React.FC = () => {
               >
                 <div className="relative rounded-2xl p-2 bg-white shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 group">
                    <VideoHover 
-                    src={ASSETS.VIDEO_ABOUT}
+                    src={ASSETS.VIDEOS.ABOUT_bg}
                     className="aspect-video w-full rounded-xl bg-gray-100"
                   />
                   {/* Optional caption if needed */}
