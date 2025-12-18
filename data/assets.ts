@@ -5,13 +5,14 @@ import { RESEARCH_ASSETS } from './asset_research';
 import { PEOPLE_ASSETS } from './asset_people';
 import { GALLERY_ASSETS } from './asset_gallery';
 import { JOURNAL_ASSETS } from './asset_journal';
+import { LOGO_ASSETS } from './asset_logo';
 
 // 모든 자산을 통합 관리하는 파일입니다.
 // 개별 수정은 data/ 폴더 내의 각 asset_*.ts 파일을 참고하세요.
 
 export const ASSETS = {
-  // 로고 (public 폴더의 logo.png 사용)
-  LOGO: "/logo.png",
+  // 로고
+  LOGO: LOGO_ASSETS.LOGO,
 
   // 동영상
   VIDEOS: {

@@ -13,7 +13,6 @@
           extend: {
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
-              // Mapping 'serif' class to Rajdhani to replace all headings with the new futuristic font
               serif: ['Rajdhani', 'sans-serif'], 
             },
             colors: {
@@ -24,7 +23,7 @@
                 600: '#2563eb',
                 700: '#1d4ed8',
                 800: '#1e40af',
-                900: '#0f172a', // Deep Navy
+                900: '#0f172a',
               },
               gray: {
                 50: '#f9fafb',
@@ -47,10 +46,9 @@
     </script>
     <style>
       body {
-        background-color: #f8fafc; /* Slate 50 */
-        color: #1e293b; /* Slate 800 */
+        background-color: #f8fafc;
+        color: #1e293b;
       }
-      /* Smooth scrolling */
       html {
         scroll-behavior: smooth;
       }
@@ -58,17 +56,20 @@
   <script type="importmap">
 {
   "imports": {
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
-    "framer-motion": "https://esm.sh/framer-motion@^12.23.26"
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
